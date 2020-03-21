@@ -1,0 +1,3 @@
+ssbdiagnose -E CONFIGURATION FROM SERVICE demo/OrderService -S db1,14331\s14dev1 -d orderdb TO SERVICE demo/InventoryService -S db2,14331\s14dev1 -d inventorydb ON CONTRACT demo/contracts/demoContract
+
+ssbdiagnose -E CONFIGURATION FROM SERVICE demo/InventoryService -S db2,14331\s14dev1 -d inventorydb TO SERVICE demo/OrderService -S db1,14331\s14dev1 -d orderdb ON CONTRACT demo/contracts/demoContract
