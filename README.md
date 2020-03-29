@@ -49,10 +49,10 @@ Server 1, Server 2
 
 ### Notification Flow
 
-1. customerdb, orderdb, and inventorydb sends messages to notificationdb.
+1. customerdb, orderdb, and inventorydb sends messages to notificationdb
 2. notificationdb sends notification to web1
-3. applications on web1 runs upon receiving notification from notificationdb.
-4. each application simply logs the message into a file.
+3. upon receiving notification from notificationdb, the external activation service on web1 runs applications
+4. each application simply logs the message into a file
 
 ## References
 
