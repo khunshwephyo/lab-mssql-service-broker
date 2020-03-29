@@ -12,14 +12,16 @@ create contract [demo/contracts/demoContract]
 );
 go
 
-create queue dbo.demoInventoryQueue;
+create queue dbo.demoInventoryQueue
+  with status = on;
 go
 
 create service [demo/InventoryService]
   on queue dbo.demoInventoryQueue([demo/contracts/demoContract]);
 go
 
-create queue dbo.demoOrderQueue;
+create queue dbo.demoOrderQueue
+  with status = on;
 go
 
 create service [demo/OrderService] 

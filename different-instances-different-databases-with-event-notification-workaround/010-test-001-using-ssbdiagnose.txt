@@ -1,0 +1,14 @@
+# Use ssbdiagnose to test configurations between services
+
+ssbdiagnose -E CONFIGURATION FROM SERVICE mycompany/services/customerdb/notificationrequestservice -S db1,14331\s14dev1 -d customerdb TO SERVICE mycompany/services/notificationdb/customernotificationservice -S db2,14331\s14dev1 -d notificationdb ON CONTRACT mycompany/contracts/notificationcontract
+
+ssbdiagnose -E CONFIGURATION FROM SERVICE mycompany/services/inventorydb/notificationrequestservice -S db2,14331\s14dev1 -d inventorydb TO SERVICE mycompany/services/notificationdb/inventorynotificationservice -S db2,14331\s14dev1 -d notificationdb ON CONTRACT mycompany/contracts/notificationcontract
+
+ssbdiagnose -E CONFIGURATION FROM SERVICE mycompany/services/orderdb/notificationrequestservice -S db2,14331\s14dev1 -d orderdb TO SERVICE mycompany/services/notificationdb/ordernotificationservice -S db2,14331\s14dev1 -d notificationdb ON CONTRACT mycompany/contracts/notificationcontract
+
+ssbdiagnose -E CONFIGURATION FROM SERVICE mycompany/services/notificationdb/customernotificationservice -S db2,14331\s14dev1 -d notificationdb TO SERVICE mycompany/services/customerdb/notificationrequestservice -S db1,14331\s14dev1 -d customerdb ON CONTRACT mycompany/contracts/notificationcontract
+
+ssbdiagnose -E CONFIGURATION FROM SERVICE mycompany/services/notificationdb/ordernotificationservice -S db2,14331\s14dev1 -d notificationdb TO SERVICE mycompany/services/orderdb/notificationrequestservice -S db2,14331\s14dev1 -d orderdb ON CONTRACT mycompany/contracts/notificationcontract
+
+ssbdiagnose -E CONFIGURATION FROM SERVICE mycompany/services/notificationdb/inventorynotificationservice -S db2,14331\s14dev1 -d notificationdb TO SERVICE mycompany/services/inventorydb/notificationrequestservice -S db2,14331\s14dev1 -d inventorydb ON CONTRACT mycompany/contracts/notificationcontract
+
