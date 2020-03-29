@@ -35,7 +35,7 @@ Server Name = web1
 Installed with following components.
 
 * SQL Server Service Broker External Activator (SSBEA 64bit)
-* .NET Framework 3.5 (required by SSBEA above)
+* .NET Framework 3.5 (required for SSBEA above)
 * .NET Framework 4.8 (required for application that are activated upon notification)
 
 ### Notification Flow
@@ -48,5 +48,5 @@ Installed with following components.
 ## References
 
 1. https://www.databasejournal.com/article.php/3880181/Arshad-Ali.htm
-2. https://docs.microsoft.com/en-us/sql/relational-databases/service-broker/configure-dialog-security-for-event-notifications?view=sql-server-2017 - I could not make this work on my test environment.  So used the workaround above.
+2. https://docs.microsoft.com/en-us/sql/relational-databases/service-broker/configure-dialog-security-for-event-notifications?view=sql-server-2017 - I could not make this work on my test environment.  So I used the workaround above.
 3. https://www.apress.com/gp/book/9781590599990
