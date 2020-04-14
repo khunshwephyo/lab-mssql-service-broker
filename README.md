@@ -8,6 +8,10 @@ SQL scripts that send and receive messages within same database of an instance.
 
 SQL scripts that send and receive messages between two different databases in same instance.
 
+## same-server-different-instances-different-databases
+
+SQL scripts that send and receive messages between different databases from different instances but all on same physical server.
+
 ## different-instances-different-databases-with-event-notification-workaround
 
 SQL scripts that send and receive messages among three different databases in two different instances.
